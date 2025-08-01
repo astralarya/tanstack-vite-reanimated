@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 import { useQuery, useMutation } from '@tanstack/react-query'
+import Animated from 'react-native-reanimated'
 
 export const Route = createFileRoute('/demo/tanstack-query')({
   component: TanStackQueryDemo,
