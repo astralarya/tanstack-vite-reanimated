@@ -5,9 +5,9 @@ import viteTsConfigPaths from 'vite-tsconfig-paths'
 import tailwindcss from '@tailwindcss/vite'
 
 const config = defineConfig({
-  // ssr: {
-  //   noExternal: ['react-native-reanimated'],
-  // },
+  ssr: {
+    noExternal: ['react-native-reanimated'],
+  },
   resolve: {
     extensions: [
       '.web.mts',
@@ -30,6 +30,7 @@ const config = defineConfig({
   },
   optimizeDeps: {
     esbuildOptions: {
+      loader: { '.js': 'jsx' },
       resolveExtensions: [
         '.web.mts',
         '.web.mjs',
